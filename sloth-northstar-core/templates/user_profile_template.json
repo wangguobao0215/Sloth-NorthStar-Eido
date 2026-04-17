@@ -1,0 +1,24 @@
+{
+  "name": "",
+  "university": "University of Waterloo",
+  "program": "CS Co-op",
+  "year": null,
+  "current_term_type": null,
+  "term_start_date": null,
+  "term_end_date": null,
+  "weekly_available_hours": null,
+  "fixed_anchors": {
+    "sleep": { "bedtime": null, "wakeup": null },
+    "exercise": { "frequency_per_week": null, "preferred_time": null },
+    "courses_description": null
+  },
+  "ai_learning_level": null,
+  "learning_goal": null,
+  "meaning_anchor": null,
+  "created_at": null,
+  "last_updated": null,
+  "metadata": {
+    "schema_version": "1.0.0",
+    "shared_by": "sloth-northstar-family"
+  }
+}

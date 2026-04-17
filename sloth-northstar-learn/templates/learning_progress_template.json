@@ -1,0 +1,18 @@
+{
+  "active_courses": [],
+  "completed_courses": [],
+  "archived_courses": [],
+  "knowledge_map": {},
+  "current_plan": {
+    "generated_at": null,
+    "current_phase": null,
+    "weekly_tasks": [],
+    "milestones": []
+  },
+  "weekly_log": [],
+  "last_weekly_review": null,
+  "metadata": {
+    "schema_version": "1.0.0",
+    "skill_name": "sloth-northstar-learn"
+  }
+}

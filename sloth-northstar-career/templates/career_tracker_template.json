@@ -1,0 +1,16 @@
+{
+  "resume_versions": [],
+  "applications": [],
+  "interviews": [],
+  "experiences": [],
+  "career_narrative": "",
+  "target_companies": [],
+  "settings": {
+    "current_coop_round": null,
+    "application_deadline_reminder": true
+  },
+  "metadata": {
+    "schema_version": "1.0.0",
+    "skill_name": "sloth-northstar-career"
+  }
+}

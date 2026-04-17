@@ -1,0 +1,16 @@
+{
+  "daily_moods": [],
+  "meaning_anchor": {
+    "statement": "",
+    "set_date": null
+  },
+  "milestones": [],
+  "settings": {
+    "mood_checkin_enabled": true,
+    "checkin_time": "21:00"
+  },
+  "metadata": {
+    "schema_version": "1.0.0",
+    "skill_name": "sloth-northstar-mind"
+  }
+}

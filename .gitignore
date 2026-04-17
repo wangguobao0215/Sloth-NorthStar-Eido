@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Runtime data
+sloth-northstar-data/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Env files
+.env
+.env.local
+*.env
+
+# Logs
+*.log
+
+# Design drafts (development reference, not part of the skill package)
+Sloth-NorthStar-Eido技能初步设计方案.md
+Sloth-NorthStar-Eido技能设计参考资料.md
+Sloth-NorthStar-Eido设计方案评审意见.md
+Sloth-NorthStar-Eido-Skill家族架构设计.md

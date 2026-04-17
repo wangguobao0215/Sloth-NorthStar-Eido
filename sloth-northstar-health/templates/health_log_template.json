@@ -1,0 +1,14 @@
+{
+  "daily_logs": [],
+  "weekly_summaries": [],
+  "settings": {
+    "sleep_goal_hours": 7,
+    "exercise_goal_per_week": 3,
+    "winter_mode": false,
+    "vitamin_d_reminder": true
+  },
+  "metadata": {
+    "schema_version": "1.0.0",
+    "skill_name": "sloth-northstar-health"
+  }
+}
