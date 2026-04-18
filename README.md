@@ -18,7 +18,7 @@ Unlike generic productivity tools, NorthStar understands the unique rhythm of Wa
 
 | Skill | Purpose | Status |
 |:---|:---|:---|
-| [sloth-northstar-learn](sloth-northstar-learn/) | AI learning navigator: curriculum, study plans, progress tracking | v0.1.0 |
+| [sloth-northstar-learn](sloth-northstar-learn/) | AI learning navigator: curriculum, study plans, progress tracking | **v0.2.0** |
 | [sloth-northstar-health](sloth-northstar-health/) | Physical health companion: sleep, exercise, energy, Vitamin D | v0.1.0 |
 | [sloth-northstar-mind](sloth-northstar-mind/) | Mental resilience support: mood tracking, resources, meaning anchors | v0.1.0 |
 | [sloth-northstar-career](sloth-northstar-career/) | Co-op career assistant: resume, interviews, career narrative | v0.1.0 |
@@ -73,6 +73,10 @@ All NorthStar skills share data through a common directory:
 
 Each skill owns its data file and can read (but not write) other skills' data for cross-dimensional awareness.
 
+### Schema Versioning
+
+Data files include `metadata.schema_version` for forward compatibility. The learn skill supports automatic migration from v1.0.0 through v1.3.0, transparently upgrading older data files without user intervention.
+
 ### Co-op Cycle Awareness
 
 The core differentiator of NorthStar is its understanding of Waterloo's Co-op rhythm:
@@ -84,18 +88,70 @@ The core differentiator of NorthStar is its understanding of Waterloo's Co-op rh
 | **Job Search** | Paused, switch to interview prep | Watch for burnout | High alert for rejection stress | Full activation |
 | **Exam Period** | Suspended entirely | Minimum sleep/exercise protection | Stress awareness | Dormant |
 
-## AI Learning Curriculum
+## AI Learning Navigator (v0.2.0 Highlights)
 
-The **learn** skill provides a structured 4-phase AI learning path (18-30 months):
+### Three Learning Modes
+
+The **learn** skill supports three approaches — choose the one that fits your style:
+
+| Mode | Philosophy | Best For |
+|:---|:---|:---|
+| **Bottom-Up** | Build foundations first, then apply | Learners who prefer solid theory before practice |
+| **Top-Down** | Start with a project, backfill knowledge gaps | Learners who are motivated by building things |
+| **Hybrid Spiral** | Alternate between theory and projects | Most learners after the initial phase |
+
+### Curriculum Overview
+
+**Bottom-Up Path (4 phases, 18-30 months):**
 
 | Phase | Focus | Duration | Key Topics |
 |:---|:---|:---|:---|
 | 1. Foundations | Python, ML basics, Math | 4-6 months | Scikit-learn, Linear Algebra, Probability |
-| 2. Core | Deep Learning | 6-9 months | CNN, RNN, Transformer architecture |
-| 3. Frontier | GenAI & LLMs | 6-9 months | LLM internals, Prompt Engineering, RAG, Agents |
+| 2. Core | Deep Learning | 6-9 months | CNN, RNN, Transformer, Build LLM from Scratch |
+| 3. Frontier | GenAI & LLMs | 6-9 months | LLM internals, Prompt Engineering, RAG, Agents, MCP |
 | 4. Engineering | MLOps | 3-6 months | Model serving, CI/CD for ML, Monitoring |
 
-Includes a seed database of 19 free courses from top providers (DeepLearning.AI, Stanford, fast.ai, Microsoft, etc.).
+**Top-Down Path (5 levels, project-driven):**
+
+| Level | Project Goal | Duration | Learn As Needed |
+|:---|:---|:---|:---|
+| 1 | AI Chatbot | 0-3 months | API, Prompt Engineering |
+| 2 | RAG Document QA | 3-6 months | Embeddings, Vector Search, Deployment |
+| 3 | AI Agent + MCP | 6-9 months | Tool Use, Agent Orchestration, MCP Protocol |
+| 4 | LLM Fine-tuning | 9-12 months | LoRA, Transformer Internals |
+| 5 | Multi-Agent Platform | 12+ months | System Design, MLOps, Full-stack |
+
+### 2025-2026 Course Highlights
+
+The seed database includes **35 free courses** from top providers, with special focus on emerging directions:
+
+- **AI Agents** (7 courses): Andrew Ng Agentic AI, HuggingFace Agents Course, Stanford CS329A, Google Agents Intensive, Microsoft Agent Academy
+- **MCP** (3 courses): Anthropic official intro + advanced, HuggingFace MCP Course
+- **LLM from Scratch**: Stanford CS336 (Language Modeling from Scratch)
+- **LLM Fine-tuning**: freeCodeCamp Complete Fine-Tuning, DeepLearning.AI GRPO
+
+### 18 Workflows
+
+The learn skill includes 18 workflows organized into four tiers with progressive disclosure:
+
+| Tier | Workflows | Unlocked |
+|:---|:---|:---|
+| **Core** (1-6) | First use, daily conversation, plan generation, weekly review, course management, Co-op cycle switch | Always |
+| **Daily** (7-10) | "What to learn today" + timeline, 5-min mode, knowledge flashback, learning streak | Always |
+| **Growth** (11-15) | Job narrative generation, semester handover memo, Feynman teaching, work experience integration, energy awareness | After completing first course |
+| **Advanced** (16-18) | Build in Public, social learning & peer network, outcome feedback loop | After first job search season |
+
+### Key Features (New in v0.2.0)
+
+- **Name Personalization**: The system remembers your name and builds a mentor-student relationship
+- **Adaptive Difficulty Calibration**: Automatically adjusts pace based on actual vs. estimated completion time
+- **Course Collector Defense**: Limits active courses to 2, warns if abandonment pattern detected
+- **Knowledge Radar Chart**: ASCII visualization of skill mastery across 12+ AI domains
+- **Cognitive Load Management**: 45-minute cap on new concept learning, energy-aware recommendations
+- **Paper Reading Ladder**: 3-rung progression from blog summaries to independent paper reading
+- **System Design Thinking**: "What if deployed to production?" exercises at each project level
+- **Schema Migration**: Automatic data format upgrades across versions (1.0 → 1.3)
+- **Course Health Check**: Quarterly link validation and freshness verification
 
 ## Important Disclaimers
 
@@ -115,14 +171,20 @@ Sloth-NorthStar-Eido/
 ├── CHANGELOG.md                       # Version history
 ├── .gitignore
 │
-├── sloth-northstar-learn/             # AI Learning Navigator
-│   ├── SKILL.md
+├── sloth-northstar-learn/             # AI Learning Navigator (v0.2.0)
+│   ├── SKILL.md                       # Main skill definition (modular, ~320 lines)
 │   ├── references/
-│   │   ├── curriculum.md              # 4-phase curriculum details
-│   │   └── courses.json               # 19 seed courses
+│   │   ├── curriculum.md              # 4-phase curriculum + paper ladder + system design
+│   │   ├── courses.json               # 35 seed courses
+│   │   ├── top_down_projects.md       # 5-level project-driven path
+│   │   └── workflows/
+│   │       ├── workflows_core.md      # Workflows 1-6: core flows
+│   │       ├── workflows_daily.md     # Workflows 7-10: daily interactions
+│   │       ├── workflows_growth.md    # Workflows 11-15: growth acceleration
+│   │       └── workflows_advanced.md  # Workflows 16-18: advanced features
 │   └── templates/
-│       ├── user_profile_template.json
-│       └── learning_progress_template.json
+│       ├── user_profile_template.json     # Schema v1.3.0
+│       └── learning_progress_template.json # Schema v1.3.0
 │
 ├── sloth-northstar-health/            # Physical Health Companion
 │   ├── SKILL.md
@@ -144,7 +206,7 @@ Sloth-NorthStar-Eido/
 └── sloth-northstar-core/              # Profile & Coordination Center
     ├── SKILL.md
     └── templates/
-        (uses user_profile_template from learn/)
+        └── user_profile_template.json
 ```
 
 ## Contributing

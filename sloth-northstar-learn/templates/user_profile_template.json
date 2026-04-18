@@ -7,18 +7,34 @@
   "term_start_date": null,
   "term_end_date": null,
   "weekly_available_hours": null,
+  "learning_mode": null,
   "fixed_anchors": {
     "sleep": { "bedtime": null, "wakeup": null },
     "exercise": { "frequency_per_week": null, "preferred_time": null },
-    "courses_description": null
+    "courses_description": null,
+    "commute": { "duration_minutes": null, "times_per_week": null }
   },
   "ai_learning_level": null,
   "learning_goal": null,
   "meaning_anchor": null,
+  "energy_pattern": {
+    "default_curve": {
+      "06-09": "high",
+      "09-12": "high",
+      "12-14": "medium",
+      "14-16": "low",
+      "16-18": "medium",
+      "18-20": "medium",
+      "20-22": "medium",
+      "22-24": "low"
+    },
+    "override_signals": [],
+    "completion_history": []
+  },
   "created_at": null,
   "last_updated": null,
   "metadata": {
-    "schema_version": "1.0.0",
+    "schema_version": "1.3.0",
     "shared_by": "sloth-northstar-family"
   }
 }

@@ -39,22 +39,35 @@ Scopes: learn, health, mind, career, core, docs
 ### Skill Development Guidelines
 
 #### SKILL.md Standards
-- Keep SKILL.md under 500 lines
+- Keep SKILL.md concise. Large workflows should be split into separate files under `references/workflows/`
 - Use YAML frontmatter with `name` (lowercase, hyphens, max 64 chars) and `description` (max 1024 chars)
 - Reference files must be one level deep (no nested references)
 - Write descriptions in third person
 - Include both WHAT the skill does and WHEN to use it
 
+#### Workflow Files
+- Workflows are organized by theme in `references/workflows/`:
+  - `workflows_core.md` — Essential flows loaded every conversation
+  - `workflows_daily.md` — Daily interaction flows
+  - `workflows_growth.md` — Growth acceleration flows (unlocked progressively)
+  - `workflows_advanced.md` — Advanced features (unlocked at later stages)
+- Each workflow file should be self-contained with clear trigger conditions
+- New workflows should be added to the appropriate category file
+
 #### Data Files
 - All shared data goes to `~/.qoderwork/skills/sloth-northstar-data/`
 - Each skill only writes to its own data files
-- Use JSON format with `metadata.schema_version` for future migrations
+- Use JSON format with `metadata.schema_version` for migrations
 - Always provide templates in `templates/` directory
+- When adding new fields, add a migration rule in SKILL.md's Schema Migration section
 
 #### Course Database (courses.json)
 - All courses must be free or have a free audit option
-- Include `last_verified` date
-- Required fields: `course_id`, `title`, `provider`, `url`, `phase`, `category`, `estimated_hours`, `free`, `status`
+- Include `last_verified` date (format: `YYYY-MM`)
+- Required fields: `course_id`, `title`, `provider`, `url`, `phase`, `category`, `estimated_hours`, `free`, `status`, `learning_mode`, `last_verified`
+- The `learning_mode` field should be an array containing `"bottom_up"` and/or `"top_down"`
+- New courses should include a `notes` field explaining why this course is recommended
+- Run the course health check process before submitting course updates
 
 #### Mental Health Content
 - **Never** provide diagnostic or therapeutic content
@@ -105,22 +118,35 @@ Scopes: learn, health, mind, career, core, docs
 ### Skill 开发规范
 
 #### SKILL.md 标准
-- SKILL.md 保持在 500 行以内
+- SKILL.md 保持精简，大型工作流应拆分到 `references/workflows/` 下的独立文件
 - 使用 YAML frontmatter，包含 `name`（小写+连字符，最长64字符）和 `description`（最长1024字符）
 - 引用文件仅一层深度（不嵌套引用）
 - description 使用第三人称
 - 同时说明 Skill 做什么（WHAT）和何时使用（WHEN）
 
+#### 工作流文件
+- 工作流按主题组织在 `references/workflows/` 下：
+  - `workflows_core.md` — 每次对话都加载的核心流程
+  - `workflows_daily.md` — 每日交互流程
+  - `workflows_growth.md` — 成长加速流程（渐进式解锁）
+  - `workflows_advanced.md` — 高级功能（后期解锁）
+- 每个工作流文件应自包含，带有清晰的触发条件
+- 新增工作流应添加到对应的分类文件中
+
 #### 数据文件
 - 共享数据统一存放至 `~/.qoderwork/skills/sloth-northstar-data/`
 - 每个Skill只写入自己负责的数据文件
-- 使用JSON格式，包含 `metadata.schema_version` 以支持未来迁移
+- 使用JSON格式，包含 `metadata.schema_version` 以支持迁移
 - 在 `templates/` 目录中提供数据模板
+- 新增字段时，需在 SKILL.md 的 Schema 迁移机制部分添加迁移规则
 
 #### 课程数据库 (courses.json)
 - 所有课程必须免费或支持免费旁听
-- 包含 `last_verified` 日期
-- 必填字段：`course_id`、`title`、`provider`、`url`、`phase`、`category`、`estimated_hours`、`free`、`status`
+- 包含 `last_verified` 日期（格式：`YYYY-MM`）
+- 必填字段：`course_id`、`title`、`provider`、`url`、`phase`、`category`、`estimated_hours`、`free`、`status`、`learning_mode`、`last_verified`
+- `learning_mode` 字段为数组，包含 `"bottom_up"` 和/或 `"top_down"`
+- 新增课程应包含 `notes` 字段说明推荐理由
+- 提交课程更新前，请运行课程健康检查流程
 
 #### 心理健康内容
 - **绝不**提供诊断或治疗性内容

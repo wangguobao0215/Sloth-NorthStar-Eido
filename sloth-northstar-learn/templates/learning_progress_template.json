@@ -2,6 +2,7 @@
   "active_courses": [],
   "completed_courses": [],
   "archived_courses": [],
+  "active_project": null,
   "knowledge_map": {},
   "current_plan": {
     "generated_at": null,
@@ -9,10 +10,25 @@
     "weekly_tasks": [],
     "milestones": []
   },
+  "streak": {
+    "current_streak": 0,
+    "longest_streak": 0,
+    "last_study_date": null,
+    "milestones_reached": []
+  },
+  "daily_log": [],
   "weekly_log": [],
   "last_weekly_review": null,
+  "last_flashback_date": null,
+  "job_narratives": [],
+  "semester_handovers": [],
+  "feynman_notes": [],
+  "work_experience_log": [],
+  "public_outputs": [],
+  "peer_activities": [],
+  "outcome_feedback": [],
   "metadata": {
-    "schema_version": "1.0.0",
+    "schema_version": "1.3.0",
     "skill_name": "sloth-northstar-learn"
   }
 }
