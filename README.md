@@ -1,8 +1,20 @@
-# Sloth-NorthStar-Eido
+<p align="center">
+  <img src="assets/sloth-avatar-round.png" width="120" />
+</p>
 
-**面向滑铁卢大学 CS Co-op 学生的全人发展 Skill 家族，基于 QoderWork 构建。**
+<h1 align="center">Sloth-NorthStar-Eido</h1>
 
-*Code wins arguments. Health wins life.*
+<p align="center">
+  <strong>面向滑铁卢大学 CS Co-op 学生的全人发展 Skill 家族</strong><br/>
+  基于 <a href="https://qoder.com">QoderWork</a> 构建<br/>
+  <em>Code wins arguments. Health wins life.</em>
+</p>
+
+<p align="center">
+  <img src="assets/qrcode.jpg" width="140" /><br/>
+  <sub>扫码关注 <strong>树懒老K</strong> · 获取更多 AI 技能</sub><br/>
+  <em>慢一点，深一度</em>
+</p>
 
 [English](README_EN.md) | 中文文档
 
