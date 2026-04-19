@@ -22,7 +22,11 @@ tags:
 
 # Sloth-NorthStar-Eido
 
+> <p align="center"><img src="https://raw.githubusercontent.com/wangguobao0215/Sloth-NorthStar-Eido/main/assets/sloth-avatar-round.png" width="80" /></p>
+>
 > Code wins arguments. Health wins life.
+>
+> <p align="center"><img src="https://raw.githubusercontent.com/wangguobao0215/Sloth-NorthStar-Eido/main/assets/qrcode.jpg" width="120" /><br/><sub>扫码关注 <b>树懒老K</b> · 获取更多 AI 技能</sub><br/><i>慢一点，深一度</i></p>
 
 ## 概述
 
