@@ -1,10 +1,15 @@
 ---
-name: sloth-northstar-health
-description: >
-  面向滑铁卢大学CS Co-op学生的身体健康感知助手。通过对话式自报告追踪睡眠、
-  锻炼、精力状态与维生素D摄入，提供个性化健康建议与预警。感知加拿大冬季特殊环境，
-  保护学生的"硬件基础设施"。当用户提到睡眠、锻炼、疲劳、精力不足、
-  维生素D、久坐、身体不适、作息调整时使用。
+name: Sloth-NorthStar-Health
+version: 0.1.0
+description: >-
+  Physical health companion for University of Waterloo CS Co-op students. Tracks sleep,
+  exercise, energy levels, and Vitamin D intake through conversational self-reporting.
+  Provides personalized health suggestions and alerts, with awareness of Canadian winter
+  conditions. Use when user mentions sleep, exercise, fatigue, low energy, Vitamin D,
+  sedentary habits, physical discomfort, or schedule adjustment.
+description_zh: >-
+  面向滑铁卢大学 CS Co-op 学生的身体健康感知助手：对话式追踪睡眠、锻炼、精力与维生素 D，
+  感知加拿大冬季环境，保护学生的"硬件基础设施"。
 ---
 
 # Sloth NorthStar Health — 身体韧性守护者

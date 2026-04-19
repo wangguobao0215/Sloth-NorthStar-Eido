@@ -1,18 +1,17 @@
 ---
-name: sloth-northstar-learn
-description: >
-  面向滑铁卢大学CS Co-op学生的AI系统化学习导航助手。提供AI课程体系规划、
-  个性化学习计划生成与动态调整、进度追踪与每周回顾。核心能力是感知Co-op学期周期
-  （Study Term / Co-op Term / 求职季 / 考试周），自动调节学习节奏与强度。
-  支持三种学习模式：系统路线（Bottom-Up）、项目驱动（Top-Down）、混合螺旋模式。
-  支持课程增删（含课程收集者防御）、自建项目、知识图谱追踪。覆盖LLM、AI Agent、MCP、RAG等前沿方向。
-  内置求职叙事自动生成、学期交接备忘录、费曼教学验证、Co-op工作经历学习化、
-  学习能量感知（认知负荷理论）、Build in Public公开输出引导、社交学习与Peer Network、
-  成果闭环反馈等高级功能。配套论文阅读阶梯和系统设计思维训练。
-  让学习成果直接转化为求职竞争力。
-  当用户提到AI学习计划、课程安排、学习进度、自学路径、Co-op学期切换、
-  学习时间管理、AI课程推荐、项目驱动学习、面试准备、学习复盘、
-  写博客、技术分享、找学习搭子、面试复盘时使用。
+name: Sloth-NorthStar-Learn
+version: 0.2.0
+description: >-
+  AI learning navigator for University of Waterloo CS Co-op students. Provides curriculum
+  planning, personalized study plan generation, progress tracking, and weekly reviews.
+  Core capability: Co-op cycle awareness that auto-adjusts learning pace across Study Term,
+  Co-op Term, job search, and exam periods. Supports Bottom-Up, Top-Down, and Hybrid Spiral
+  learning modes. Covers LLM, AI Agent, MCP, RAG and other frontier directions.
+  Use when user mentions AI learning plan, course schedule, study progress, self-study path,
+  Co-op term switch, learning time management, project-driven learning, or interview prep.
+description_zh: >-
+  面向滑铁卢大学 CS Co-op 学生的 AI 学习导航助手：课程规划、学习计划、进度追踪，
+  感知 Co-op 周期自动调节学习节奏，支持系统路线/项目驱动/混合螺旋三种模式。
 ---
 
 # Sloth NorthStar Learn — AI 学习导航仪

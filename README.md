@@ -1,42 +1,42 @@
 # Sloth-NorthStar-Eido
 
-**A holistic development skill family for University of Waterloo CS Co-op students, powered by QoderWork.**
+**面向滑铁卢大学 CS Co-op 学生的全人发展 Skill 家族，基于 QoderWork 构建。**
 
 *Code wins arguments. Health wins life.*
 
-[中文文档](README_CN.md) | English
+[English](README_EN.md) | 中文文档
 
 ---
 
-## What is NorthStar?
+## NorthStar 是什么？
 
-NorthStar is a family of QoderWork Skills designed to help University of Waterloo CS Co-op students achieve sustainable growth across four dimensions: **AI learning, physical health, mental resilience, and career development.**
+NorthStar 是一套 QoderWork Skill 家族，专为滑铁卢大学计算机科学 Co-op 学生设计，帮助他们在四个维度实现可持续成长：**AI 学习、身体健康、心理韧性、职业发展。**
 
-Unlike generic productivity tools, NorthStar understands the unique rhythm of Waterloo's Co-op system — the intense alternation between study terms and work terms, the pressure of WaterlooWorks job searches, and the long Canadian winters. It adapts its behavior based on what phase of the Co-op cycle you're in.
+与通用效率工具不同，NorthStar 理解滑铁卢 Co-op 体系的独特节奏——Study Term 与 Co-op Term 的高强度交替、WaterlooWorks 求职的压力、以及漫长的加拿大冬季。它会根据你所处的 Co-op 周期阶段自动调整行为。
 
-## Skill Family
+## Skill 家族成员
 
-| Skill | Purpose | Status |
+| Skill | 职责 | 状态 |
 |:---|:---|:---|
-| [sloth-northstar-learn](sloth-northstar-learn/) | AI learning navigator: curriculum, study plans, progress tracking | **v0.2.0** |
-| [sloth-northstar-health](sloth-northstar-health/) | Physical health companion: sleep, exercise, energy, Vitamin D | v0.1.0 |
-| [sloth-northstar-mind](sloth-northstar-mind/) | Mental resilience support: mood tracking, resources, meaning anchors | v0.1.0 |
-| [sloth-northstar-career](sloth-northstar-career/) | Co-op career assistant: resume, interviews, career narrative | v0.1.0 |
-| [sloth-northstar-core](sloth-northstar-core/) | User profile management and cross-skill coordination | v0.1.0 |
+| [sloth-northstar-learn](sloth-northstar-learn/) | AI 学习导航：课程体系、学习计划、进度追踪 | **v0.2.0** |
+| [sloth-northstar-health](sloth-northstar-health/) | 身体健康守护：睡眠、锻炼、精力、维生素D | v0.1.0 |
+| [sloth-northstar-mind](sloth-northstar-mind/) | 心理韧性支持：情绪追踪、专业资源、意义锚点 | v0.1.0 |
+| [sloth-northstar-career](sloth-northstar-career/) | Co-op 求职助手：简历优化、面试准备、职业叙事 | v0.1.0 |
+| [sloth-northstar-core](sloth-northstar-core/) | 用户画像管理与跨 Skill 协调 | v0.1.0 |
 
-**Each skill works independently.** Install only what you need. When multiple skills are installed, they share data to provide a more integrated experience.
+**每个 Skill 可独立运行。** 按需安装，不必全部安装。当多个 Skill 同时安装时，它们通过共享数据提供更完整的体验。
 
-## Quick Start
+## 快速开始
 
-### Installation
+### 安装
 
-Copy any skill directory to your QoderWork skills folder:
+将任意 Skill 目录复制到 QoderWork skills 文件夹：
 
 ```bash
-# Install the learning navigator (recommended to start with)
+# 安装学习导航（推荐首先安装）
 cp -r sloth-northstar-learn ~/.qoderwork/skills/
 
-# Or install the entire family
+# 或安装全部家族成员
 cp -r sloth-northstar-learn ~/.qoderwork/skills/
 cp -r sloth-northstar-health ~/.qoderwork/skills/
 cp -r sloth-northstar-mind ~/.qoderwork/skills/
@@ -44,175 +44,176 @@ cp -r sloth-northstar-career ~/.qoderwork/skills/
 cp -r sloth-northstar-core ~/.qoderwork/skills/
 ```
 
-### First Use
+### 首次使用
 
-Once installed, simply start a conversation in QoderWork. The skill will be triggered automatically when you mention relevant topics:
+安装后，在 QoderWork 中正常对话即可。Skill 会在你提到相关话题时自动触发：
 
-- *"I want to start learning AI systematically"* → triggers **learn**
-- *"I've been sleeping terribly this week"* → triggers **health**
-- *"I feel so stressed about Co-op"* → triggers **mind**
-- *"Help me polish my resume"* → triggers **career**
-- *"What's my overall status?"* → triggers **core**
+- *"我想系统学习AI"* → 触发 **learn**
+- *"这周睡得很差"* → 触发 **health**
+- *"Co-op压力好大"* → 触发 **mind**
+- *"帮我改简历"* → 触发 **career**
+- *"我现在整体情况怎么样？"* → 触发 **core**
 
-On first use, the skill will ask 2-3 quick questions to understand your situation — no lengthy setup wizards.
+首次使用时，Skill 只会问 2-3 个简短问题了解你的情况，没有冗长的设置流程。
 
-## Architecture
+## 架构设计
 
-### Shared Data Model
+### 共享数据模型
 
-All NorthStar skills share data through a common directory:
+所有 NorthStar Skill 通过共享目录协同：
 
 ```
 ~/.qoderwork/skills/sloth-northstar-data/
-├── user_profile.json        # Shared user profile (all skills read, core/learn write)
-├── learning_progress.json   # Learning data (learn skill)
-├── health_log.json          # Health data (health skill)
-├── mood_log.json            # Mood data (mind skill)
-└── career_tracker.json      # Career data (career skill)
+├── user_profile.json        # 共享用户画像（所有Skill可读，core/learn负责写入）
+├── learning_progress.json   # 学习数据（learn Skill 专属）
+├── health_log.json          # 健康数据（health Skill 专属）
+├── mood_log.json            # 情绪数据（mind Skill 专属）
+└── career_tracker.json      # 求职数据（career Skill 专属）
 ```
 
-Each skill owns its data file and can read (but not write) other skills' data for cross-dimensional awareness.
+每个 Skill 拥有自己的数据文件写入权，可以读取（但不写入）其他 Skill 的数据以实现跨维度感知。
 
-### Schema Versioning
+### Schema 版本管理
 
-Data files include `metadata.schema_version` for forward compatibility. The learn skill supports automatic migration from v1.0.0 through v1.3.0, transparently upgrading older data files without user intervention.
+数据文件包含 `metadata.schema_version` 字段，支持向前兼容。learn Skill 支持从 v1.0.0 到 v1.3.0 的自动迁移，透明升级旧版数据文件，无需用户干预。
 
-### Co-op Cycle Awareness
+### Co-op 周期感知
 
-The core differentiator of NorthStar is its understanding of Waterloo's Co-op rhythm:
+NorthStar 的核心差异化能力是理解滑铁卢的 Co-op 节奏：
 
-| Term Type | Learn | Health | Mind | Career |
+| 学期类型 | Learn | Health | Mind | Career |
 |:---|:---|:---|:---|:---|
-| **Study Term** | Full intensity (6-8 hrs/week) | Standard monitoring | Normal | Dormant |
-| **Co-op Term** | Reduced (2-4 hrs/week) | Adapt to work schedule | Watch for adjustment stress | Experience accumulation |
-| **Job Search** | Paused, switch to interview prep | Watch for burnout | High alert for rejection stress | Full activation |
-| **Exam Period** | Suspended entirely | Minimum sleep/exercise protection | Stress awareness | Dormant |
+| **Study Term** | 全强度（6-8小时/周） | 常规监测 | 正常运行 | 休眠 |
+| **Co-op Term** | 降低强度（2-4小时/周） | 适配工作时间表 | 关注环境适应压力 | 经历积累 |
+| **求职季** | 暂停，切换面试准备 | 关注过劳 | 高度关注被拒压力 | 全面激活 |
+| **考试周** | 完全暂停 | 最低限度保护睡眠/锻炼 | 压力感知 | 休眠 |
 
-## AI Learning Navigator (v0.2.0 Highlights)
+## AI 学习导航 (v0.2.0 亮点)
 
-### Three Learning Modes
+### 三种学习模式
 
-The **learn** skill supports three approaches — choose the one that fits your style:
+**learn** Skill 支持三种学习方式——选择适合你风格的模式：
 
-| Mode | Philosophy | Best For |
+| 模式 | 理念 | 适合人群 |
 |:---|:---|:---|
-| **Bottom-Up** | Build foundations first, then apply | Learners who prefer solid theory before practice |
-| **Top-Down** | Start with a project, backfill knowledge gaps | Learners who are motivated by building things |
-| **Hybrid Spiral** | Alternate between theory and projects | Most learners after the initial phase |
+| **Bottom-Up（系统路线）** | 先打地基，再做应用 | 喜欢先理论后实践的学习者 |
+| **Top-Down（项目驱动）** | 先做项目，遇到什么补什么 | 做中学、实战驱动的学习者 |
+| **Hybrid Spiral（混合螺旋）** | 理论与项目交替推进 | 过了入门阶段的大多数学习者 |
 
-### Curriculum Overview
+### 课程体系概览
 
-**Bottom-Up Path (4 phases, 18-30 months):**
+**Bottom-Up 路径（4阶段，18-30个月）：**
 
-| Phase | Focus | Duration | Key Topics |
+| 阶段 | 重点 | 时长 | 核心内容 |
 |:---|:---|:---|:---|
-| 1. Foundations | Python, ML basics, Math | 4-6 months | Scikit-learn, Linear Algebra, Probability |
-| 2. Core | Deep Learning | 6-9 months | CNN, RNN, Transformer, Build LLM from Scratch |
-| 3. Frontier | GenAI & LLMs | 6-9 months | LLM internals, Prompt Engineering, RAG, Agents, MCP |
-| 4. Engineering | MLOps | 3-6 months | Model serving, CI/CD for ML, Monitoring |
+| 1. 地基 | Python、ML基础、数学 | 4-6个月 | Scikit-learn、线性代数、概率论 |
+| 2. 核心 | 深度学习 | 6-9个月 | CNN、RNN、Transformer、从零构建LLM |
+| 3. 前沿 | 生成式AI与LLM | 6-9个月 | LLM原理、Prompt Engineering、RAG、Agent、MCP |
+| 4. 工程化 | MLOps | 3-6个月 | 模型服务、ML CI/CD、监控 |
 
-**Top-Down Path (5 levels, project-driven):**
+**Top-Down 路径（5级项目驱动）：**
 
-| Level | Project Goal | Duration | Learn As Needed |
+| Level | 项目目标 | 预计时长 | 按需学习 |
 |:---|:---|:---|:---|
-| 1 | AI Chatbot | 0-3 months | API, Prompt Engineering |
-| 2 | RAG Document QA | 3-6 months | Embeddings, Vector Search, Deployment |
-| 3 | AI Agent + MCP | 6-9 months | Tool Use, Agent Orchestration, MCP Protocol |
-| 4 | LLM Fine-tuning | 9-12 months | LoRA, Transformer Internals |
-| 5 | Multi-Agent Platform | 12+ months | System Design, MLOps, Full-stack |
+| 1 | AI 聊天机器人 | 0-3个月 | API、Prompt Engineering |
+| 2 | RAG 文档问答系统 | 3-6个月 | Embedding、向量检索、部署 |
+| 3 | AI Agent + MCP | 6-9个月 | Tool Use、Agent编排、MCP协议 |
+| 4 | LLM 微调/从零训练 | 9-12个月 | LoRA、Transformer底层 |
+| 5 | 多Agent平台 | 12个月+ | 系统设计、MLOps、全栈工程 |
 
-### 2025-2026 Course Highlights
+### 2025-2026 课程亮点
 
-The seed database includes **35 free courses** from top providers, with special focus on emerging directions:
+种子课程库包含 **35门免费课程**，特别关注新兴方向：
 
-- **AI Agents** (7 courses): Andrew Ng Agentic AI, HuggingFace Agents Course, Stanford CS329A, Google Agents Intensive, Microsoft Agent Academy
-- **MCP** (3 courses): Anthropic official intro + advanced, HuggingFace MCP Course
-- **LLM from Scratch**: Stanford CS336 (Language Modeling from Scratch)
-- **LLM Fine-tuning**: freeCodeCamp Complete Fine-Tuning, DeepLearning.AI GRPO
+- **AI Agent**（7门）：Andrew Ng Agentic AI、HuggingFace Agents Course、Stanford CS329A、Google Agents Intensive、Microsoft Agent Academy
+- **MCP**（3门）：Anthropic 官方入门+进阶、HuggingFace MCP Course
+- **从零构建LLM**：Stanford CS336（Language Modeling from Scratch）
+- **LLM微调**：freeCodeCamp Complete Fine-Tuning、DeepLearning.AI GRPO
 
-### 18 Workflows
+### 18个工作流
 
-The learn skill includes 18 workflows organized into four tiers with progressive disclosure:
+learn Skill 包含18个工作流，分四层渐进式披露：
 
-| Tier | Workflows | Unlocked |
+| 层级 | 包含流程 | 解锁条件 |
 |:---|:---|:---|
-| **Core** (1-6) | First use, daily conversation, plan generation, weekly review, course management, Co-op cycle switch | Always |
-| **Daily** (7-10) | "What to learn today" + timeline, 5-min mode, knowledge flashback, learning streak | Always |
-| **Growth** (11-15) | Job narrative generation, semester handover memo, Feynman teaching, work experience integration, energy awareness | After completing first course |
-| **Advanced** (16-18) | Build in Public, social learning & peer network, outcome feedback loop | After first job search season |
+| **核心**（1-6） | 首次使用、日常对话、计划生成、每周回顾、课程管理、Co-op周期切换 | 始终启用 |
+| **每日**（7-10） | 今天学什么+时间轴、5分钟模式、知识闪回、学习Streak | 始终启用 |
+| **成长**（11-15） | 求职叙事自动生成、学期交接备忘录、费曼教学、工作经历学习化、学习能量感知 | 完成首门课程后 |
+| **高级**（16-18） | Build in Public、社交学习与Peer Network、成果闭环反馈 | 首次进入求职季 |
 
-### Key Features (New in v0.2.0)
+### 核心特性（v0.2.0 新增）
 
-- **Name Personalization**: The system remembers your name and builds a mentor-student relationship
-- **Adaptive Difficulty Calibration**: Automatically adjusts pace based on actual vs. estimated completion time
-- **Course Collector Defense**: Limits active courses to 2, warns if abandonment pattern detected
-- **Knowledge Radar Chart**: ASCII visualization of skill mastery across 12+ AI domains
-- **Cognitive Load Management**: 45-minute cap on new concept learning, energy-aware recommendations
-- **Paper Reading Ladder**: 3-rung progression from blog summaries to independent paper reading
-- **System Design Thinking**: "What if deployed to production?" exercises at each project level
-- **Schema Migration**: Automatic data format upgrades across versions (1.0 → 1.3)
-- **Course Health Check**: Quarterly link validation and freshness verification
+- **姓名个性化**：系统记住你的名字，建立学长型导师关系
+- **自适应难度校准**：根据实际完成时间 vs 预估时间自动调整学习节奏
+- **课程收集者防御**：活跃课程限制2门，检测到放弃模式时发出警告
+- **知识雷达图**：ASCII可视化12+个AI领域的掌握程度
+- **认知负荷管理**：新概念学习45分钟封顶，能量感知推荐
+- **论文阅读阶梯**：3级台阶——博客解读→经典论文关键章节→独立读新论文
+- **系统设计思维训练**：每个项目Level追加"如果上线到生产环境"思考题
+- **Schema自动迁移**：跨版本数据格式自动升级（1.0 → 1.3）
+- **课程健康检查**：季度链接有效性验证与内容时效性检查
 
-## Important Disclaimers
+## 重要声明
 
-- **Not medical advice.** Health suggestions are general wellness tips. Consult a healthcare professional for medical concerns.
-- **Not mental health treatment.** The mind skill is a "signpost," not a therapist. It provides professional resource referrals, not clinical intervention.
-- **Not immigration/legal advice.** For visa and work permit questions, consult UW's Immigration Consultant.
-- **Course information may be outdated.** Always verify links and availability before enrolling.
+- **非医疗建议。** 健康建议为通识性内容，如有身体不适请咨询专业医疗人员。
+- **非心理治疗。** Mind Skill 定位为"指路牌"而非"治疗师"，提供专业资源引荐而非临床干预。
+- **非移民/法律建议。** 签证和工签问题请咨询学校的 Immigration Consultant。
+- **课程信息可能过时。** 注册前请点击链接确认最新状态。
 
-## Project Structure
+## 项目结构
 
 ```
 Sloth-NorthStar-Eido/
-├── README.md                          # This file (English)
-├── README_CN.md                       # Chinese documentation
-├── LICENSE                            # MIT License
-├── CONTRIBUTING.md                    # Contribution guidelines (bilingual)
-├── CHANGELOG.md                       # Version history
+├── SKILL.md                           # 家族总入口技能定义
+├── README.md                          # 本文件（中文文档）
+├── README_EN.md                       # 英文文档
+├── LICENSE                            # MIT 许可证
+├── CONTRIBUTING.md                    # 贡献指南（中英双语）
+├── CHANGELOG.md                       # 版本历史
 ├── .gitignore
 │
-├── sloth-northstar-learn/             # AI Learning Navigator (v0.2.0)
-│   ├── SKILL.md                       # Main skill definition (modular, ~320 lines)
+├── sloth-northstar-learn/             # AI 学习导航（v0.2.0）
+│   ├── SKILL.md                       # 主技能定义（模块化架构，约320行）
 │   ├── references/
-│   │   ├── curriculum.md              # 4-phase curriculum + paper ladder + system design
-│   │   ├── courses.json               # 35 seed courses
-│   │   ├── top_down_projects.md       # 5-level project-driven path
+│   │   ├── curriculum.md              # 四阶段课程体系 + 论文阶梯 + 系统设计
+│   │   ├── courses.json               # 35门种子课程
+│   │   ├── top_down_projects.md       # 5级项目驱动路径
 │   │   └── workflows/
-│   │       ├── workflows_core.md      # Workflows 1-6: core flows
-│   │       ├── workflows_daily.md     # Workflows 7-10: daily interactions
-│   │       ├── workflows_growth.md    # Workflows 11-15: growth acceleration
-│   │       └── workflows_advanced.md  # Workflows 16-18: advanced features
+│   │       ├── workflows_core.md      # 流程一~六：核心流程
+│   │       ├── workflows_daily.md     # 流程七~十：每日交互
+│   │       ├── workflows_growth.md    # 流程十一~十五：成长加速
+│   │       └── workflows_advanced.md  # 流程十六~十八：高级功能
 │   └── templates/
 │       ├── user_profile_template.json     # Schema v1.3.0
 │       └── learning_progress_template.json # Schema v1.3.0
 │
-├── sloth-northstar-health/            # Physical Health Companion
+├── sloth-northstar-health/            # 身体健康守护
 │   ├── SKILL.md
 │   └── templates/
 │       └── health_log_template.json
 │
-├── sloth-northstar-mind/              # Mental Resilience Support
+├── sloth-northstar-mind/              # 心理韧性支持
 │   ├── SKILL.md
 │   ├── references/
-│   │   └── mental_health_resources.md # Professional resource directory
+│   │   └── mental_health_resources.md # 专业心理健康资源目录
 │   └── templates/
 │       └── mood_log_template.json
 │
-├── sloth-northstar-career/            # Co-op Career Assistant
+├── sloth-northstar-career/            # Co-op 求职助手
 │   ├── SKILL.md
 │   └── templates/
 │       └── career_tracker_template.json
 │
-└── sloth-northstar-core/              # Profile & Coordination Center
+└── sloth-northstar-core/              # 画像与协调中心
     ├── SKILL.md
     └── templates/
         └── user_profile_template.json
 ```
 
-## Contributing
+## 参与贡献
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. We welcome contributions in course database updates, resource directory maintenance, and skill improvements.
+请参阅 [CONTRIBUTING.md](CONTRIBUTING.md)。我们欢迎在课程数据库更新、资源目录维护和 Skill 改进方面的贡献。
 
-## License
+## 许可证
 
 [MIT](LICENSE)

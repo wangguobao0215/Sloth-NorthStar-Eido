@@ -1,11 +1,16 @@
 ---
-name: sloth-northstar-career
-description: >
-  面向滑铁卢大学CS Co-op学生的求职与职业发展助手。提供简历"加拿大化"优化、
-  Co-op面试准备（公司风格解码+行为面试+技术面试）、职业叙事构建、
-  WaterlooWorks策略指导。理解加拿大职场文化与Co-op求职节奏。
-  当用户提到简历、面试、Co-op求职、WaterlooWorks、Cover Letter、
-  职业规划、实习、工作申请时使用。
+name: Sloth-NorthStar-Career
+version: 0.1.0
+description: >-
+  Co-op career development assistant for University of Waterloo CS students. Provides
+  resume "Canadianization" optimization, Co-op interview preparation (company style decoding,
+  behavioral and technical interviews), career narrative building, and WaterlooWorks strategy
+  guidance. Understands Canadian workplace culture and Co-op job search rhythm.
+  Use when user mentions resume, interview, Co-op job search, WaterlooWorks, cover letter,
+  career planning, internship, or job application.
+description_zh: >-
+  面向滑铁卢大学 CS Co-op 学生的求职与职业发展助手：简历优化、面试准备、
+  职业叙事构建、WaterlooWorks 策略指导，理解加拿大职场文化与 Co-op 求职节奏。
 ---
 
 # Sloth NorthStar Career — Co-op 求职助手

@@ -1,10 +1,13 @@
 ---
-name: sloth-northstar-core
-description: >
-  Sloth NorthStar Skill家族的统一用户画像管理与状态协调中心。
-  负责初始用户画像建立、学期类型切换管理、固定锚点统一配置、
-  家族状态总览。当用户想查看整体状态、切换学期模式、修改个人设置、
-  或首次使用NorthStar系列Skill时使用。
+name: Sloth-NorthStar-Core
+version: 0.1.0
+description: >-
+  User profile management and cross-skill coordination center for the NorthStar family.
+  Handles initial profile setup, term-type switching, anchor point configuration, and
+  family-wide status overview. Use when user wants to check overall status, switch term mode,
+  modify personal settings, or first uses any NorthStar skill.
+description_zh: >-
+  NorthStar 家族的用户画像管理与状态协调中心：初始画像建立、学期切换、锚点配置、全局状态总览。
 ---
 
 # Sloth NorthStar Core — 用户画像与协调中心

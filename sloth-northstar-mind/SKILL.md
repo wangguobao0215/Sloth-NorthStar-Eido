@@ -1,11 +1,16 @@
 ---
-name: sloth-northstar-mind
-description: >
-  面向滑铁卢大学CS Co-op学生的心理韧性支持助手。提供每日情绪追踪、
-  专业心理资源导引、冒充者综合征应对、意义锚点管理与失败正常化支持。
-  严格定位为"指路牌"而非"治疗师"，引导学生连接专业帮助。
-  当用户提到压力、焦虑、抑郁、情绪低落、自我怀疑、冒充者综合征、
-  挫败感、找不到意义时使用。
+name: Sloth-NorthStar-Mind
+version: 0.1.0
+description: >-
+  Mental resilience support assistant for University of Waterloo CS Co-op students.
+  Provides daily mood tracking, professional mental health resource referrals, impostor
+  syndrome coping, meaning anchor management, and failure normalization. Strictly positioned
+  as a "signpost" — not a therapist — guiding students to professional help.
+  Use when user mentions stress, anxiety, depression, low mood, self-doubt, impostor syndrome,
+  frustration, or loss of meaning.
+description_zh: >-
+  面向滑铁卢大学 CS Co-op 学生的心理韧性支持助手：情绪追踪、专业资源引荐、
+  冒充者综合征应对、意义锚点管理，定位为"指路牌"而非"治疗师"。
 ---
 
 # Sloth NorthStar Mind — 心理韧性支持
