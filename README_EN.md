@@ -214,6 +214,14 @@ Sloth-NorthStar-Eido/
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. We welcome contributions in course database updates, resource directory maintenance, and skill improvements.
 
+## Documentation
+
+For a comprehensive user guide, see [User Guide](references/user-guide.md) (Chinese), covering full feature descriptions, usage examples, workflow guidance, and FAQ.
+
+## Version
+
+Current version: 0.2.0
+
 ## License
 
 [MIT](LICENSE)

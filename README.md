@@ -226,6 +226,14 @@ Sloth-NorthStar-Eido/
 
 请参阅 [CONTRIBUTING.md](CONTRIBUTING.md)。我们欢迎在课程数据库更新、资源目录维护和 Skill 改进方面的贡献。
 
+## 文档
+
+详细使用指南请参阅 [用户指南](references/user-guide.md)，包含完整的功能说明、使用示例、工作流指引和常见问题解答。
+
+## 版本
+
+当前版本：0.2.0
+
 ## 许可证
 
 [MIT](LICENSE)
