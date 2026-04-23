@@ -1,5 +1,5 @@
 ---
-name: Sloth-NorthStar-Eido
+name: sloth-northstar-eido
 version: 0.2.0
 description: >-
   Holistic development skill family for University of Waterloo CS Co-op students —
